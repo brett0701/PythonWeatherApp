@@ -4,6 +4,9 @@ Python and pip must be installed on your computer
 Make a folder called MyWeatherApp.
 Clone the files to this folder.
 Then run:  pip install -r requirements.txt
+Create a .env file with the weather key obtained from OpenWeatherApp
+ex:
+export WEATHER_KEY='xxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 To run locally you'll need to:
 
