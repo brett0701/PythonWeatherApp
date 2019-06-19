@@ -8,6 +8,6 @@
  </h1> 
  <h1>Weather</h1>
  <h1>{{ d['name'] }}, {{ d['sys']['country'] }}</h1>
-    <h1>Temperature: {{ d['main']['temp']|round|int}} °C</h1>
+    <h1>Temperature: {{ d['main']['temp']|round|int}} °F</h1>
     <h1>Humidity: {{ d['main']['humidity']|round|int}} %</h1>
 {% endfor %}
