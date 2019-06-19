@@ -1,16 +1,14 @@
 from pprint import pprint as pp
 from flask import Flask, flash, redirect, render_template, request, url_for
-
 from weather import query_api
+from usaCities import citydata
 app = Flask(__name__)
+
 @app.route('/')
 def index():
     return render_template(
         'weather.html',
-        data=[{'name':'New York'}, {'name':'Atlanta'}, {'name':'Los Angeles'},
-        {'name':'Apex'}, {'name':'Birmingham'}, {'name':'Denver'},
-        {'name':'Bennington'}, {'name':'Cincinnatti'}, {'name':'Athens'}, 
-        {'name':'Raleigh'}])
+        data = citydata)
 @app.route("/result" , methods=['GET', 'POST'])
 def result():
     data = []
